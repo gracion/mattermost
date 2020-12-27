@@ -19,6 +19,8 @@
 	req.HTTPMethod = @"POST";
 	req.HTTPBody = json;
 	[req setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+	// Pass the Personal Access Token set up for this user or bot
+	// You'll want to store this securely, not here - see readme
 	[req setValue:@"Bearer 9adoijfoaethisisnotreal" forHTTPHeaderField:@"Authorization"];
 	
 	NSURLSession *sess = [NSURLSession sharedSession];
